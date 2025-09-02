@@ -1,4 +1,4 @@
-:root{
+:root {
     --d-blue: #000814;
     --m-blue: #001D3D;
     --l-blue: #003566;
@@ -7,62 +7,116 @@
 }
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: var(--m-blue);
     height: auto;
 }
 
-.s1{
+.s1 {
     width: 100%;
     height: auto;
-    
+
 }
 
-.wrap-img{
+.wrap-img {
     width: 100%;
 
 }
 
-.img{
+.img {
     width: 100%;
     right: auto;
 }
 
-.wrap-text{
+.wrap-text {
     width: 100%;
     padding: 20px;
-
+    position: relative;
 }
 
-.title{
+.title {
     color: white;
     font-family: "Inter", sans-serif;
-    margin-bottom: 10px;
     font-size: 40px;
+    position: static;
+ 
 }
 
-.text{
+.text {
     font-family: "Inter", sans-serif;
     color: #ffffff;
     font-size: 20px;
     line-height: 30px;
     font-style: italic;
+    position: static;
+ 
 }
 
-.line1{
+.line1 {
     height: 10px;
     background-color: var(--yellow);
     width: 100%;
     margin: 0 auto;
 }
 
-@media( width >= 768px){
+.s2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: auto;
+    min-height: 80vh;
+    padding:50px 0px;
+}
+
+.wrap-img{
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   box-shadow: 0 4px 20px #090909;
+
+}
+
+.img-card{
+    width: 300px;
+    height: 200px;
+    transform: scale(1.2);
+}
+
+.card{
+    width: 300px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    background-color: var(--yellow);
+    border-radius: 40px;
+    box-shadow: 0 4px 20px #090909;
+}
+
+.wrap-text h2{
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrap-text p{
+    font-size: 19px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+
+
+@media(width >=768px) {
     .s1 {
         min-height: 80vh;
         background-image: url("../images/image 3.png");
@@ -74,21 +128,36 @@ body{
         justify-content: center;
         flex-direction: column;
         width: 100%;
+        padding: 0px 40px;
+        box-shadow: 0 4px 20px #090909;
+    }
 
-    }
-    .img{
+    .img {
         display: none;
     }
-    .title{
-        font-size: 100px;
+
+    .title {
+        font-size: 180px;
+        text-shadow: 0 4px 4px #090909;
+        position: absolute;
+        bottom: -300px;
     }
-    .line{
+
+    .line1{
         display: none;
     }
+
     .text{
         font-size: 48px;
-        text-shadow:0 4px 4px white;
+        text-shadow: 0 4px 4px #090909;
         line-height: 55px;
+        position: absolute;
+        bottom: -350px;
+
     }
 
+    .s2{
+        gap: 70px;
+    }
 }
+
